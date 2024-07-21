@@ -15,7 +15,8 @@ const Owner = (props) => {
   const [userCreationStatus, setUserCreationStatus] = useState('');
 
   const [tokens, setTokens] = useState('');
-  const [balance, setBalance] = useState('');
+  const [balanceAppNode, setBalanceAppNode] = useState('');
+  const [balanceSmartMtr, setBalanceSmartMtr] = useState('');
 
   const[name, setName] = useState('');
   const [peerEnergyAddress, setPeerEnergyAddress] = useState('');
@@ -117,11 +118,23 @@ const Owner = (props) => {
     }
   };
 
-  const getBalance = async () => {
+  const getBalanceByAppNodeAddr = async () => {
     if (props.contract) {
       try {
         const balance = await props.contract.methods.CheckMybalance(appNodeAddr).call();
-        setBalance(balance);
+        setBalanceAppNode(balance);
+      } catch (error) {
+        console.error(error);
+        alert(error);
+      }
+    }
+  };
+
+  const getBalanceBySmartMeterAddr = async () => {
+    if (props.contract) {
+      try {
+        const balance = await props.contract.methods.balanceOf(appNodeAddr).call();
+        setBalanceSmartMtr(balance);
       } catch (error) {
         console.error(error);
         alert(error);
@@ -167,10 +180,15 @@ const Owner = (props) => {
       <button className='mx-3' onClick={transferTokens}>Transfer Tokens</button>
       <p> </p>
 
-      <h3>Get Balance</h3>
+      <h3>Get Balance - by App node address</h3>
       <input type="text" value={appNodeAddr} onChange={(e) => setAppNodeAddr(e.target.value)} placeholder="App Node Address" />
-      <button className='mx-3' onClick={getBalance}>Get Balance</button>
-      <p>Balance: {balance}</p>
+      <button className='mx-3' onClick={getBalanceByAppNodeAddr}>Get Balance</button>
+      <p>Balance: {balanceAppNode}</p>
+
+      <h3>Get Balance - by smart meter address</h3>
+      <input type="text" value={appNodeAddr} onChange={(e) => setAppNodeAddr(e.target.value)} placeholder="App Node Address" />
+      <button className='mx-3' onClick={getBalanceBySmartMeterAddr}>Get Balance</button>
+      <p>Balance: {balanceSmartMtr}</p>
     </div>
 
     <div>

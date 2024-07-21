@@ -37,6 +37,7 @@ import Buyer from './components/Buyer.jsx';
 import Seller from './components/Seller.jsx';
 import TokenOffers from './components/TokenOffers.jsx';
 import Navbar from './components/Navbar.jsx';
+import Exchange from './components/Exchange.jsx';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -64,6 +65,10 @@ function App() {
     {
       path: "/token-offers",
       element: <> <Navbar /><TokenOffers contract={peerEnergy} account={account} /></>,
+    },
+    {
+      path: "/exchange-contract",
+      element: <> <Navbar /><Exchange contract={exchangeContract} account={account} /></>,
     },
 
   ]);

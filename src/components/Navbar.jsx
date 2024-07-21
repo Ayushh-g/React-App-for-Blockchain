@@ -26,6 +26,10 @@ export default function Navbar() {
                 <li className="nav-item">
                 <Link className="nav-link" to="/token-offers">Token Offers</Link>
                 </li>
+
+                <li className="nav-item">
+                <Link className="nav-link" to="/exchange-contract">Exchange Contract</Link>
+                </li>
                 {/* <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Dropdown
