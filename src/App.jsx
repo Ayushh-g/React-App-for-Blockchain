@@ -36,6 +36,11 @@ import Owner from './components/Owner.jsx';
 import Buyer from './components/Buyer.jsx';
 import Seller from './components/Seller.jsx';
 import TokenOffers from './components/TokenOffers.jsx';
+import Navbar from './components/Navbar.jsx';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 
 function App() {
   const [account, setAccount] = useState('');
@@ -43,6 +48,25 @@ function App() {
   const [exchangeContract, setExchangeContract] = useState(null);
   // const [web3, setWeb3] = useState(null);
   
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <><Navbar /><Owner contract={peerEnergy} contract2={exchangeContract} account={account} /></>,
+    },
+    {
+      path: "/buyer",
+      element: <><Navbar /><Buyer contract={peerEnergy} account={account} /></>,
+    },
+    {
+      path: "/seller",
+      element: <><Navbar /><Seller contract={peerEnergy} account={account} /></>,
+    },
+    {
+      path: "/token-offers",
+      element: <> <Navbar /><TokenOffers contract={peerEnergy} account={account} /></>,
+    },
+
+  ]);
 
   useEffect(() => {
     loadBlockchainData();
@@ -66,31 +90,14 @@ function App() {
     }
   };
 
-  // useEffect(() => {
-  //   loadBlockchainData();
-  // }, []);
-
-  // const loadBlockchainData = async () => {
-  //   const web3 = new Web3(Web3.givenProvider || 'http://localhost:8545');
-  //   // setWeb3(web3);
-  //   const accounts = await web3.eth.requestAccounts();
-  //   setAccount(accounts[0]);
-  //   const networkId = await web3.eth.net.getId();
-  //   const networkData = PeerEnergyContract.networks[networkId];
-  //   if (networkData) {
-  //     const contract = new web3.eth.Contract(PeerEnergyContract.abi, networkData.address);
-  //     setPeerEnergy(contract);
-  //     window.alert('Smart contract deployed to detected network.');
-
-  //   } else {
-  //     window.alert('Smart contract not deployed to detected network.');
-  //   }
-  // };
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Peer Energy Trading DApp</h1>
+        {/* <Navbar /> */}
+        <RouterProvider router={router} />
+
+        {/* <h1>Peer Energy Trading DApp</h1>
         <Owner contract={peerEnergy} contract2={exchangeContract} account={account} />
 
         <h2>Buyer</h2>
@@ -100,7 +107,7 @@ function App() {
         <Seller contract={peerEnergy} account={account} />
 
         <h2>Token Offers</h2>
-        <TokenOffers contract={peerEnergy} account={account} />
+        <TokenOffers contract={peerEnergy} account={account} /> */}
 
       </header>
     </div>

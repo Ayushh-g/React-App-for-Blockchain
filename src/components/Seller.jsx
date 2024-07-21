@@ -41,8 +41,9 @@ const Seller = (props) => {
     };
 
     return(
-        <div>
-                    
+        <div className='my-3'>
+            <h2>Peer Energy DApp</h2>
+            <h5>Connected account: {props.account}</h5>                   
             <h3>Place Sell Offer</h3>
             <input type="text" value={price} onChange={(e) => setPrice(e.target.value)} placeholder="Price" />
             <input type="text" value={quantity} onChange={(e) => setQuantity(e.target.value)} placeholder="Quantity" />

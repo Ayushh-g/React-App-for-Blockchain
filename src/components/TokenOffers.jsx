@@ -65,10 +65,9 @@ const TokenOffers = (props) => {
     };
 
     return (
-        <div>
-        <h1>Double Sided Auction</h1>
-        <p>Account: {props.account}</p>
-
+        <div className='my-3'>
+            <h2>Peer Energy DApp</h2>
+            <h5>Connected account: {props.account}</h5>
         <div>
             <h2>Place Sell Token Offer</h2>
             <input type="text" placeholder="Sell Price" value={sellPrice} onChange={(e) => setSellPrice(e.target.value)} />

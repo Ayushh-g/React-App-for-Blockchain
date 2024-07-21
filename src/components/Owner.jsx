@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 // import Web3 from 'web3';
 // import PeerEnergyContract from './contracts/PeerEnergy.json'; // ABI of the PeerEnergy contract
 
@@ -20,30 +20,14 @@ const Owner = (props) => {
   const[name, setName] = useState('');
   const [peerEnergyAddress, setPeerEnergyAddress] = useState('');
   const [ExchangeAddr, setExchangeAddr] = useState(''); 
-  // const [price, setPrice] = useState('');
-  // const [quantity, setQuantity] = useState('');
-  // const [time, setTime] = useState('');
-  // const [sellOffers_Price ,setSellOffers_Price] = useState([]);
-  // const [sellOffers_Qty, setSellOffers_Qty] = useState([]);
-  // const [buyOffers_Price ,setBuyOffers_Price] = useState([]);
-  // const [buyOffers_Qty, setBuyOffers_Qty] = useState([]);
+  const[currentExchangeAddr, setCurrentExchangeAddr] = useState('');
 
-  // useEffect(() => {
-  //   const loadBlockchainData = async () => {
-  //     const web3 = new Web3(Web3.givenProvider || 'http://localhost:8545');
-  //     const accounts = await web3.eth.requestAccounts();
-  //     setAccount(accounts[0]);
-  //     const networkId = await web3.eth.net.getId();
-  //     const networkData = PeerEnergyContract.networks[networkId];
-  //     if (networkData) {
-  //       const contract = new web3.eth.Contract(PeerEnergyContract.abi, networkData.address);
-  //       setPeerEnergy(contract);
-  //     } else {
-  //       window.alert('Smart contract not deployed to detected network.');
-  //     }
-  //   };
-  //   loadBlockchainData();
-  // }, []);
+
+  useEffect(() => {
+    viewName();
+    viewPeerEnergyAddress();
+    loadCurrentExchangeAddr();
+  }, );
 
   const viewName = async () => {
     if (props.contract) {
@@ -69,12 +53,23 @@ const Owner = (props) => {
     }
   };
 
+  const loadCurrentExchangeAddr = async () => {
+    if (props.contract2) {
+      try {
+        const e = await props.contract.methods.ExchangeAddr().call();
+        setCurrentExchangeAddr(e);
+      } catch (error) {
+        console.error(error);
+        alert(error);
+      }
+    }
+  };
+
   const changeExchangeAddr = async () => {
     if (props.contract2) {
       try {
         await props.contract.methods.setExchangeAddr(ExchangeAddr).send({ from: props.account });
-        const e = await props.contract.methods.ExchangeAddr().call();
-        setExchangeAddr(e);
+        loadCurrentExchangeAddr();
       } catch (error) { 
         console.error(error);
         alert(error);
@@ -134,84 +129,21 @@ const Owner = (props) => {
     }
   };
 
-/////////////////////////////////////////////////////////////////////
-
-
-  // const placeSellOffer = async () => {
-  //   if (props.contract) {
-  //     try {
-  //       await props.contract.methods.placeSellOffer(price, quantity, time).send({ from: props.account });
-  //       setUserCreationStatus('sell offer created successfully!');
-  //     } catch (error) {
-  //       setUserCreationStatus('Error creating sell offer.');
-  //       console.error(error);
-  //       alert(error);
-  //     }
-  //   }
-  // };
-
-  // const placeBuyOffer = async () => {
-  //   if (props.contract) {
-  //     try {
-  //       await props.contract.methods.placeBuyOffer(price, quantity, time).send({ from: props.account });
-  //       setUserCreationStatus('buy offer created successfully!');
-  //     } catch (error) {
-  //       setUserCreationStatus('Error creating buy offer.');
-  //       console.error(error);
-  //       alert(error);
-  //     }
-  //   }
-  // };
-
-  // const viewSellOffers = async () => {
-  //   if (props.contract) {
-  //     try {
-  //       const p = await props.contract.methods.viewSellOffers(gridNo, time).call();
-  //       setSellOffers_Price(p[0]);
-  //       setSellOffers_Qty(p[1]);
-
-  //       // setUserCreationStatus('User created successfully!');
-  //     } catch (error) {
-  //       setUserCreationStatus('Error seeing sell offers.');
-  //       console.error(error);
-  //       alert(error);
-  //     }
-  //   }
-  // };
-
-  // const viewBuyOffers = async () => {
-  //   if (props.contract) {
-  //     try {
-  //       const r = await props.contract.methods.viewBuyOffers(gridNo, time).call();
-  //       setBuyOffers_Price(r[0]);
-  //       setBuyOffers_Qty(r[1]);
-
-  //       // setUserCreationStatus('User created successfully!');
-  //     } catch (error) {
-  //       setUserCreationStatus('Error seeing buy offers.');
-  //       console.error(error);
-  //       alert(error);
-  //     }
-  //   }
-  // };
-
 
   return (
     <>
-    <div>
+    <div className='my-3'>
       <h2>Peer Energy DApp</h2>
-      <p>Connected account: {props.account}</p>
-      <button onClick={viewName}>View Name</button>
-      <p>Name: {name}</p>
-      <button onClick={viewPeerEnergyAddress}>View Peer Energy Address</button>
-      <p>Peer Energy Address: {peerEnergyAddress}</p>
+      <h5>Connected account: {props.account}</h5>
+      <h5>Name: {name}</h5>
+      <h5>Peer Energy Address: {peerEnergyAddress}</h5>
+      <h5> Current ExchangeAddr : {currentExchangeAddr} </h5>
       
-
+      <p> </p>
       <h3>Set Exchange Contract Address</h3>
       <input type="text" value={ExchangeAddr} onChange={(e) => setExchangeAddr(e.target.value)} placeholder="Exchange Address" />
       <button className='mx-3' onClick={changeExchangeAddr}>Change Exchange Address</button>
-      <p> ExchangeAddr : {ExchangeAddr} </p>
-    
+      <p> </p>
 
       <h3>Create Grid</h3>
       <input type="text" value={gridNumber} onChange={(e) => setGridNumber(e.target.value)} placeholder="Grid Number" />
