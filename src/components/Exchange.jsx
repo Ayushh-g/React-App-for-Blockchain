@@ -3,9 +3,9 @@ import React from 'react'
 export default function Exchange(props) {
 
   const clear_tokens = async () => {
-    if (props.contract) {
+    if (props.contract2) {
       try {
-        await props.contract.methods.clearToken().send({ from: props.account });
+        await props.contract2.methods.clearToken().send({ from: props.account });
         alert('Token Cleared');
       } catch (error) {
         console.error(error);
@@ -15,9 +15,9 @@ export default function Exchange(props) {
   }
 
   const clear_energy = async () => {
-    if (props.contract) {
+    if (props.contract2) {
       try {
-        await props.contract.methods.clearEnergy().send({ from: props.account });
+        await props.contract2.methods.clearEnergy().send({ from: props.account });
         alert('Energy Cleared');
       } catch (error) {
         console.error(error);

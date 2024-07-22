@@ -68,7 +68,7 @@ function App() {
     },
     {
       path: "/exchange-contract",
-      element: <> <Navbar /><Exchange contract={exchangeContract} account={account} /></>,
+      element: <> <Navbar /><Exchange contract2={exchangeContract} account={account} /></>,
     },
 
   ]);

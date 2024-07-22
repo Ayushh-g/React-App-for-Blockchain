@@ -82,21 +82,21 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.4.25+commit.59dbf8f1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"TimeInMins\",\"type\":\"uint256\"}],\"name\":\"changeTokenMarketTime\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"restartTrade\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"peerEnergyAddress\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"clearToken\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"tKStartTime\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"clearEnergy\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"_peerEnergyAddress\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Clearing.sol\":\"ExchangeContract\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":1},\"remappings\":[]},\"sources\":{\"project:/contracts/Clearing.sol\":{\"keccak256\":\"0x67069e44d34c0c9578141d37ad3f77636725737c36c3d481e51ffcc342b1966e\",\"urls\":[\"bzzr://8aa721614a36c5440d40515f49fbd966df8105ebc010db4f29101a009090d646\"]},\"project:/contracts/DoubleSidedAuction.sol\":{\"keccak256\":\"0x489c68d5594f8a816f5ecfdb83ac2357e23d95a093aded2d325b4567abe97c0f\",\"urls\":[\"bzzr://8d5908c87e0ecb216d219c04770e4625f0722f9090e27a44391b4f57ba4db2dd\"]},\"project:/contracts/ERC20.sol\":{\"keccak256\":\"0x95fdc3472fb3e8a6411be5e6041128e56feddd9a1049bb10abd3870f6cdd5ae9\",\"urls\":[\"bzzr://8650b1e65a47a528c556f7de75c2566bd02d0cc2b28913d20f21ae05893d928d\"]},\"project:/contracts/PeerEnergy.sol\":{\"keccak256\":\"0xe00f581ae3ef595d4a759f0d20aa1faf205172c25e133455e25b69b91b1cb0bc\",\"urls\":[\"bzzr://940a9dccbd49471e84c964512ac44d6b1ffbc74062f038da49999af7b23658d7\"]}},\"version\":1}",
-  "bytecode": "0x60806040524260025561384060035560015460048054600160a060020a031916600160a060020a0390921691909117905534801561003c57600080fd5b5060405160208061058983398101604052516000805433600160a060020a0319918216178255600180548216600160a060020a03948516179081905560048054919094169116179091556104f390819061009690396000f30060806040526004361061005e5763ffffffff60e060020a6000350416631795eaf081146100635780631bacf9081461007d57806330be86221461009257806335bff1af146100c35780635e58e0f0146100d8578063f6163c7b146100ff575b600080fd5b34801561006f57600080fd5b5061007b600435610114565b005b34801561008957600080fd5b5061007b61016e565b34801561009e57600080fd5b506100a7610222565b60408051600160a060020a039092168252519081900360200190f35b3480156100cf57600080fd5b5061007b610231565b3480156100e457600080fd5b506100ed610371565b60408051918252519081900360200190f35b34801561010b57600080fd5b5061007b610377565b60008054600160a060020a03163314610165576040805160e560020a62461bcd02815260206004820152601660248201526000805160206104a8833981519152604482015290519081900360640190fd5b50603c02600355565b600054600160a060020a031633146101be576040805160e560020a62461bcd02815260206004820152601660248201526000805160206104a8833981519152604482015290519081900360640190fd5b600480546040805160e360020a6303759f210281529051600160a060020a0390921692631bacf90892828201926000929082900301818387803b15801561020457600080fd5b505af1158015610218573d6000803e3d6000fd5b5050426002555050565b600154600160a060020a031681565b600480546040805160e260020a632fba4d3d028152339381018490529051600160a060020a039092169163bee934f4916024808201926020929091908290030181600087803b15801561028357600080fd5b505af1158015610297573d6000803e3d6000fd5b505050506040513d60208110156102ad57600080fd5b505115156001146102f6576040805160e560020a62461bcd02815260206004820152601660248201526000805160206104a8833981519152604482015290519081900360640190fd5b60035460025401421061036e57600480546040805160e060020a63d548d7930281529051600160a060020a039092169263d548d79392828201926000929082900301818387803b15801561034957600080fd5b505af115801561035d573d6000803e3d6000fd5b505060035460028054909101905550505b50565b60025481565b600480546040805160e260020a632fba4d3d028152339381018490529051600160a060020a039092169163bee934f4916024808201926020929091908290030181600087803b1580156103c957600080fd5b505af11580156103dd573d6000803e3d6000fd5b505050506040513d60208110156103f357600080fd5b5051151560011461043c576040805160e560020a62461bcd02815260206004820152601660248201526000805160206104a8833981519152604482015290519081900360640190fd5b600480546040805160e260020a63205807f9028152339381019390935251600160a060020a03909116916381601fe491602480830192600092919082900301818387803b15801561048c57600080fd5b505af11580156104a0573d6000803e3d6000fd5b5050505050560053656e646572206e6f7420617574686f72697365642e00000000000000000000a165627a7a723058206156af4b57425d74e9db939f45fd7a25c0e496475410f0eb130f5f91392ed71a0029",
-  "deployedBytecode": "0x60806040526004361061005e5763ffffffff60e060020a6000350416631795eaf081146100635780631bacf9081461007d57806330be86221461009257806335bff1af146100c35780635e58e0f0146100d8578063f6163c7b146100ff575b600080fd5b34801561006f57600080fd5b5061007b600435610114565b005b34801561008957600080fd5b5061007b61016e565b34801561009e57600080fd5b506100a7610222565b60408051600160a060020a039092168252519081900360200190f35b3480156100cf57600080fd5b5061007b610231565b3480156100e457600080fd5b506100ed610371565b60408051918252519081900360200190f35b34801561010b57600080fd5b5061007b610377565b60008054600160a060020a03163314610165576040805160e560020a62461bcd02815260206004820152601660248201526000805160206104a8833981519152604482015290519081900360640190fd5b50603c02600355565b600054600160a060020a031633146101be576040805160e560020a62461bcd02815260206004820152601660248201526000805160206104a8833981519152604482015290519081900360640190fd5b600480546040805160e360020a6303759f210281529051600160a060020a0390921692631bacf90892828201926000929082900301818387803b15801561020457600080fd5b505af1158015610218573d6000803e3d6000fd5b5050426002555050565b600154600160a060020a031681565b600480546040805160e260020a632fba4d3d028152339381018490529051600160a060020a039092169163bee934f4916024808201926020929091908290030181600087803b15801561028357600080fd5b505af1158015610297573d6000803e3d6000fd5b505050506040513d60208110156102ad57600080fd5b505115156001146102f6576040805160e560020a62461bcd02815260206004820152601660248201526000805160206104a8833981519152604482015290519081900360640190fd5b60035460025401421061036e57600480546040805160e060020a63d548d7930281529051600160a060020a039092169263d548d79392828201926000929082900301818387803b15801561034957600080fd5b505af115801561035d573d6000803e3d6000fd5b505060035460028054909101905550505b50565b60025481565b600480546040805160e260020a632fba4d3d028152339381018490529051600160a060020a039092169163bee934f4916024808201926020929091908290030181600087803b1580156103c957600080fd5b505af11580156103dd573d6000803e3d6000fd5b505050506040513d60208110156103f357600080fd5b5051151560011461043c576040805160e560020a62461bcd02815260206004820152601660248201526000805160206104a8833981519152604482015290519081900360640190fd5b600480546040805160e260020a63205807f9028152339381019390935251600160a060020a03909116916381601fe491602480830192600092919082900301818387803b15801561048c57600080fd5b505af11580156104a0573d6000803e3d6000fd5b5050505050560053656e646572206e6f7420617574686f72697365642e00000000000000000000a165627a7a723058206156af4b57425d74e9db939f45fd7a25c0e496475410f0eb130f5f91392ed71a0029",
-  "sourceMap": "58:1659:0:-;;;181:3;155:29;;241:11;219:33;;342:17;;304:56;;;-1:-1:-1;;;;;;304:56:0;-1:-1:-1;;;;;342:17:0;;;304:56;;;;;;540:243;5:2:-1;;;;30:1;27;20:12;5:2;540:243:0;;;;;;;;;;;;;595:9;:22;;607:10;-1:-1:-1;;;;;;595:22:0;;;;;;-1:-1:-1;628:38:0;;;;-1:-1:-1;;;;;628:38:0;;;;;;;;677:14;:46;;705:17;;;;677:46;;;;;;58:1659;;;;;;;;",
-  "deployedSourceMap": "58:1659:0:-;;;;;;;;;-1:-1:-1;;;58:1659:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1561:153;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;1561:153:0;;;;;;;1359:119;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1359:119:0;;;;114:32;;8:9:-1;5:2;;;30:1;27;20:12;5:2;114:32:0;;;;;;;;-1:-1:-1;;;;;114:32:0;;;;;;;;;;;;;;1110:219;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1110:219:0;;;;155:29;;8:9:-1;5:2;;;30:1;27;20:12;5:2;155:29:0;;;;;;;;;;;;;;;;;;;;928:152;;8:9:-1;5:2;;;30:1;27;20:12;5:2;928:152:0;;;;1561:153;1639:14;848:9;;-1:-1:-1;;;;;848:9:0;834:10;:23;826:58;;;;;-1:-1:-1;;;;;826:58:0;;;;;;;;;;;;-1:-1:-1;;;;;;;;;;;826:58:0;;;;;;;;;;;;;;;-1:-1:-1;1656:2:0;:13;1680:14;:26;1561:153::o;1359:119::-;848:9;;-1:-1:-1;;;;;848:9:0;834:10;:23;826:58;;;;;-1:-1:-1;;;;;826:58:0;;;;;;;;;;;;-1:-1:-1;;;;;;;;;;;826:58:0;;;;;;;;;;;;;;;1413:14;;;:29;;;-1:-1:-1;;;;;1413:29:0;;;;-1:-1:-1;;;;;1413:14:0;;;;:27;;:29;;;;:14;;:29;;;;;;:14;;:29;;;5:2:-1;;;;30:1;27;20:12;5:2;1413:29:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;-1:-1;;1467:3:0;1453:11;:17;-1:-1:-1;;1359:119:0:o;114:32::-;;;-1:-1:-1;;;;;114:32:0;;:::o;1110:219::-;433:14;;;:34;;;-1:-1:-1;;;;;433:34:0;;1154:10;433:34;;;;;;;;-1:-1:-1;;;;;433:14:0;;;;:26;;:34;;;;;;;;;;;;;;;:14;;:34;;;5:2:-1;;;;30:1;27;20:12;5:2;433:34:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;433:34:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;433:34:0;:42;;471:4;433:42;425:81;;;;;-1:-1:-1;;;;;425:81:0;;;;;;;;;;;;-1:-1:-1;;;;;;;;;;;425:81:0;;;;;;;;;;;;;;;1199:14;;1185:11;;:28;1180:3;:33;1176:136;;1226:14;;;:33;;;-1:-1:-1;;;;;1226:33:0;;;;-1:-1:-1;;;;;1226:14:0;;;;:31;;:33;;;;:14;;:33;;;;;;:14;;:33;;;5:2:-1;;;;30:1;27;20:12;5:2;1226:33:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;-1:-1;;1286:14:0;;1271:11;:29;;;;;;;-1:-1:-1;;1176:136:0;1110:219;:::o;155:29::-;;;;:::o;928:152::-;433:14;;;:34;;;-1:-1:-1;;;;;433:34:0;;973:10;433:34;;;;;;;;-1:-1:-1;;;;;433:14:0;;;;:26;;:34;;;;;;;;;;;;;;;:14;;:34;;;5:2:-1;;;;30:1;27;20:12;5:2;433:34:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;433:34:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;433:34:0;:42;;471:4;433:42;425:81;;;;;-1:-1:-1;;;;;425:81:0;;;;;;;;;;;;-1:-1:-1;;;;;;;;;;;425:81:0;;;;;;;;;;;;;;;1029:14;;;:43;;;-1:-1:-1;;;;;1029:43:0;;1061:10;1029:43;;;;;;;;-1:-1:-1;;;;;1029:14:0;;;;:31;;:43;;;;;:14;;:43;;;;;;;:14;;:43;;;5:2:-1;;;;30:1;27;20:12;5:2;1029:43:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1029:43:0;;;;928:152;:::o",
-  "source": "pragma solidity ^0.4.25;\r\n\r\nimport \"./PeerEnergy.sol\";\r\n\r\ncontract ExchangeContract{\r\n    address ExchOwner;\r\n    address public peerEnergyAddress;\r\n\r\n    uint public tKStartTime = now;//should be negative 3 hours\r\n    uint tokenMarktTime = 240 minutes;//Time to ckear Token Market (e.g is 4 hours)\r\n    PeerEnergy interfcontract= PeerEnergy(peerEnergyAddress);\r\n    \r\n    modifier onlySmartMeter(address SMaddr) {\r\n         require(interfcontract.checkSMNode(SMaddr) == true,\r\n\t\t \"Sender not authorised.\");\r\n         _;\r\n     }\r\n    \r\n    constructor(address _peerEnergyAddress) public {\r\n    \tExchOwner = msg.sender;\r\n        peerEnergyAddress = _peerEnergyAddress;\r\n        interfcontract = PeerEnergy(peerEnergyAddress);\r\n        // interfcontract.setExchangeAddr(this);\r\n\r\n    }  \r\n    \r\n    modifier onlyOwner() {\r\n    \trequire(msg.sender == ExchOwner, \"Sender not authorised.\");\r\n        _;\r\n    }\r\n    \r\n    /*  */\r\n    function clearEnergy() public onlySmartMeter(msg.sender) {\r\n        //should be 29 minutes \r\n        interfcontract.clearEnergyOrder(msg.sender);\r\n    }\r\n    \r\n    \r\n    /*  */\r\n    function clearToken() public onlySmartMeter(msg.sender){\r\n        if (now>=tKStartTime + tokenMarktTime){\r\n        \tinterfcontract.clearTokenOffers();\r\n        \ttKStartTime += tokenMarktTime;\r\n        }\r\n        \r\n    }\r\n    \r\n    \r\n    /*  */\r\n    function restartTrade() public onlyOwner() {\r\n        interfcontract.restartTrade();\r\n        tKStartTime = now;\r\n    }\r\n    \r\n    \r\n    //This function is use to change token market time in hours\r\n    function changeTokenMarketTime(uint TimeInMins) public onlyOwner() {\r\n        uint MarktTime = 60*TimeInMins;\r\n        tokenMarktTime = MarktTime;\r\n    }\r\n}",
+  "metadata": "{\"compiler\":{\"version\":\"0.4.25+commit.59dbf8f1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"TimeInMins\",\"type\":\"uint256\"}],\"name\":\"changeTokenMarketTime\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"restartTrade\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"peerEnergyAddress\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"clearToken\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"tKStartTime\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"clearEnergy\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"_peerEnergyAddress\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Clearing.sol\":\"ExchangeContract\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":1},\"remappings\":[]},\"sources\":{\"project:/contracts/Clearing.sol\":{\"keccak256\":\"0x42b1571d45448f13f8ea752a1547368e2c71ba1bdd8d9a05dc09d685d14c7d52\",\"urls\":[\"bzzr://683b54460ad4210f2bae453dc464f1703d7b1a19eb2167866992f47217c36062\"]},\"project:/contracts/DoubleSidedAuction.sol\":{\"keccak256\":\"0x489c68d5594f8a816f5ecfdb83ac2357e23d95a093aded2d325b4567abe97c0f\",\"urls\":[\"bzzr://8d5908c87e0ecb216d219c04770e4625f0722f9090e27a44391b4f57ba4db2dd\"]},\"project:/contracts/ERC20.sol\":{\"keccak256\":\"0x95fdc3472fb3e8a6411be5e6041128e56feddd9a1049bb10abd3870f6cdd5ae9\",\"urls\":[\"bzzr://8650b1e65a47a528c556f7de75c2566bd02d0cc2b28913d20f21ae05893d928d\"]},\"project:/contracts/PeerEnergy.sol\":{\"keccak256\":\"0xe00f581ae3ef595d4a759f0d20aa1faf205172c25e133455e25b69b91b1cb0bc\",\"urls\":[\"bzzr://940a9dccbd49471e84c964512ac44d6b1ffbc74062f038da49999af7b23658d7\"]}},\"version\":1}",
+  "bytecode": "0x60806040524260025561384060035560015460048054600160a060020a031916600160a060020a0390921691909117905534801561003c57600080fd5b5060405160208061055483398101604052516000805433600160a060020a0319918216178255600180548216600160a060020a03948516179081905560048054919094169116179091556104be90819061009690396000f30060806040526004361061005e5763ffffffff60e060020a6000350416631795eaf081146100635780631bacf9081461007d57806330be86221461009257806335bff1af146100c35780635e58e0f0146100d8578063f6163c7b146100ff575b600080fd5b34801561006f57600080fd5b5061007b600435610114565b005b34801561008957600080fd5b5061007b61016e565b34801561009e57600080fd5b506100a7610222565b60408051600160a060020a039092168252519081900360200190f35b3480156100cf57600080fd5b5061007b610231565b3480156100e457600080fd5b506100ed610357565b60408051918252519081900360200190f35b34801561010b57600080fd5b5061007b61035d565b60008054600160a060020a03163314610165576040805160e560020a62461bcd0281526020600482015260166024820152600080516020610473833981519152604482015290519081900360640190fd5b50603c02600355565b600054600160a060020a031633146101be576040805160e560020a62461bcd0281526020600482015260166024820152600080516020610473833981519152604482015290519081900360640190fd5b600480546040805160e360020a6303759f210281529051600160a060020a0390921692631bacf90892828201926000929082900301818387803b15801561020457600080fd5b505af1158015610218573d6000803e3d6000fd5b5050426002555050565b600154600160a060020a031681565b600480546040805160e260020a632fba4d3d028152339381018490529051600160a060020a039092169163bee934f4916024808201926020929091908290030181600087803b15801561028357600080fd5b505af1158015610297573d6000803e3d6000fd5b505050506040513d60208110156102ad57600080fd5b505115156001146102f6576040805160e560020a62461bcd0281526020600482015260166024820152600080516020610473833981519152604482015290519081900360640190fd5b600480546040805160e060020a63d548d7930281529051600160a060020a039092169263d548d79392828201926000929082900301818387803b15801561033c57600080fd5b505af1158015610350573d6000803e3d6000fd5b5050505050565b60025481565b600480546040805160e260020a632fba4d3d028152339381018490529051600160a060020a039092169163bee934f4916024808201926020929091908290030181600087803b1580156103af57600080fd5b505af11580156103c3573d6000803e3d6000fd5b505050506040513d60208110156103d957600080fd5b50511515600114610422576040805160e560020a62461bcd0281526020600482015260166024820152600080516020610473833981519152604482015290519081900360640190fd5b600480546040805160e260020a63205807f9028152339381019390935251600160a060020a03909116916381601fe491602480830192600092919082900301818387803b15801561033c57600080fd0053656e646572206e6f7420617574686f72697365642e00000000000000000000a165627a7a72305820007d236b67cbba7615ed0407d627e73d20a9af21154eb462229997747e40104b0029",
+  "deployedBytecode": "0x60806040526004361061005e5763ffffffff60e060020a6000350416631795eaf081146100635780631bacf9081461007d57806330be86221461009257806335bff1af146100c35780635e58e0f0146100d8578063f6163c7b146100ff575b600080fd5b34801561006f57600080fd5b5061007b600435610114565b005b34801561008957600080fd5b5061007b61016e565b34801561009e57600080fd5b506100a7610222565b60408051600160a060020a039092168252519081900360200190f35b3480156100cf57600080fd5b5061007b610231565b3480156100e457600080fd5b506100ed610357565b60408051918252519081900360200190f35b34801561010b57600080fd5b5061007b61035d565b60008054600160a060020a03163314610165576040805160e560020a62461bcd0281526020600482015260166024820152600080516020610473833981519152604482015290519081900360640190fd5b50603c02600355565b600054600160a060020a031633146101be576040805160e560020a62461bcd0281526020600482015260166024820152600080516020610473833981519152604482015290519081900360640190fd5b600480546040805160e360020a6303759f210281529051600160a060020a0390921692631bacf90892828201926000929082900301818387803b15801561020457600080fd5b505af1158015610218573d6000803e3d6000fd5b5050426002555050565b600154600160a060020a031681565b600480546040805160e260020a632fba4d3d028152339381018490529051600160a060020a039092169163bee934f4916024808201926020929091908290030181600087803b15801561028357600080fd5b505af1158015610297573d6000803e3d6000fd5b505050506040513d60208110156102ad57600080fd5b505115156001146102f6576040805160e560020a62461bcd0281526020600482015260166024820152600080516020610473833981519152604482015290519081900360640190fd5b600480546040805160e060020a63d548d7930281529051600160a060020a039092169263d548d79392828201926000929082900301818387803b15801561033c57600080fd5b505af1158015610350573d6000803e3d6000fd5b5050505050565b60025481565b600480546040805160e260020a632fba4d3d028152339381018490529051600160a060020a039092169163bee934f4916024808201926020929091908290030181600087803b1580156103af57600080fd5b505af11580156103c3573d6000803e3d6000fd5b505050506040513d60208110156103d957600080fd5b50511515600114610422576040805160e560020a62461bcd0281526020600482015260166024820152600080516020610473833981519152604482015290519081900360640190fd5b600480546040805160e260020a63205807f9028152339381019390935251600160a060020a03909116916381601fe491602480830192600092919082900301818387803b15801561033c57600080fd0053656e646572206e6f7420617574686f72697365642e00000000000000000000a165627a7a72305820007d236b67cbba7615ed0407d627e73d20a9af21154eb462229997747e40104b0029",
+  "sourceMap": "58:1668:0:-;;;181:3;155:29;;241:11;219:33;;342:17;;304:56;;;-1:-1:-1;;;;;;304:56:0;-1:-1:-1;;;;;342:17:0;;;304:56;;;;;;540:243;5:2:-1;;;;30:1;27;20:12;5:2;540:243:0;;;;;;;;;;;;;595:9;:22;;607:10;-1:-1:-1;;;;;;595:22:0;;;;;;-1:-1:-1;628:38:0;;;;-1:-1:-1;;;;;628:38:0;;;;;;;;677:14;:46;;705:17;;;;677:46;;;;;;58:1668;;;;;;;;",
+  "deployedSourceMap": "58:1668:0:-;;;;;;;;;-1:-1:-1;;;58:1668:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1570:153;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;1570:153:0;;;;;;;1368:119;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1368:119:0;;;;114:32;;8:9:-1;5:2;;;30:1;27;20:12;5:2;114:32:0;;;;;;;;-1:-1:-1;;;;;114:32:0;;;;;;;;;;;;;;1110:228;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1110:228:0;;;;155:29;;8:9:-1;5:2;;;30:1;27;20:12;5:2;155:29:0;;;;;;;;;;;;;;;;;;;;928:152;;8:9:-1;5:2;;;30:1;27;20:12;5:2;928:152:0;;;;1570:153;1648:14;848:9;;-1:-1:-1;;;;;848:9:0;834:10;:23;826:58;;;;;-1:-1:-1;;;;;826:58:0;;;;;;;;;;;;-1:-1:-1;;;;;;;;;;;826:58:0;;;;;;;;;;;;;;;-1:-1:-1;1665:2:0;:13;1689:14;:26;1570:153::o;1368:119::-;848:9;;-1:-1:-1;;;;;848:9:0;834:10;:23;826:58;;;;;-1:-1:-1;;;;;826:58:0;;;;;;;;;;;;-1:-1:-1;;;;;;;;;;;826:58:0;;;;;;;;;;;;;;;1422:14;;;:29;;;-1:-1:-1;;;;;1422:29:0;;;;-1:-1:-1;;;;;1422:14:0;;;;:27;;:29;;;;:14;;:29;;;;;;:14;;:29;;;5:2:-1;;;;30:1;27;20:12;5:2;1422:29:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;-1:-1;;1476:3:0;1462:11;:17;-1:-1:-1;;1368:119:0:o;114:32::-;;;-1:-1:-1;;;;;114:32:0;;:::o;1110:228::-;433:14;;;:34;;;-1:-1:-1;;;;;433:34:0;;1154:10;433:34;;;;;;;;-1:-1:-1;;;;;433:14:0;;;;:26;;:34;;;;;;;;;;;;;;;:14;;:34;;;5:2:-1;;;;30:1;27;20:12;5:2;433:34:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;433:34:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;433:34:0;:42;;471:4;433:42;425:81;;;;;-1:-1:-1;;;;;425:81:0;;;;;;;;;;;;-1:-1:-1;;;;;;;;;;;425:81:0;;;;;;;;;;;;;;;1229:14;;;:33;;;-1:-1:-1;;;;;1229:33:0;;;;-1:-1:-1;;;;;1229:14:0;;;;:31;;:33;;;;:14;;:33;;;;;;:14;;:33;;;5:2:-1;;;;30:1;27;20:12;5:2;1229:33:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1229:33:0;;;;1110:228;:::o;155:29::-;;;;:::o;928:152::-;433:14;;;:34;;;-1:-1:-1;;;;;433:34:0;;973:10;433:34;;;;;;;;-1:-1:-1;;;;;433:14:0;;;;:26;;:34;;;;;;;;;;;;;;;:14;;:34;;;5:2:-1;;;;30:1;27;20:12;5:2;433:34:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;433:34:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;433:34:0;:42;;471:4;433:42;425:81;;;;;-1:-1:-1;;;;;425:81:0;;;;;;;;;;;;-1:-1:-1;;;;;;;;;;;425:81:0;;;;;;;;;;;;;;;1029:14;;;:43;;;-1:-1:-1;;;;;1029:43:0;;1061:10;1029:43;;;;;;;;-1:-1:-1;;;;;1029:14:0;;;;:31;;:43;;;;;:14;;:43;;;;;;;:14;;:43;;;5:2:-1;;;;30:1;27;20:12",
+  "source": "pragma solidity ^0.4.25;\r\n\r\nimport \"./PeerEnergy.sol\";\r\n\r\ncontract ExchangeContract{\r\n    address ExchOwner;\r\n    address public peerEnergyAddress;\r\n\r\n    uint public tKStartTime = now;//should be negative 3 hours\r\n    uint tokenMarktTime = 240 minutes;//Time to ckear Token Market (e.g is 4 hours)\r\n    PeerEnergy interfcontract= PeerEnergy(peerEnergyAddress);\r\n    \r\n    modifier onlySmartMeter(address SMaddr) {\r\n         require(interfcontract.checkSMNode(SMaddr) == true,\r\n\t\t \"Sender not authorised.\");\r\n         _;\r\n     }\r\n    \r\n    constructor(address _peerEnergyAddress) public {\r\n    \tExchOwner = msg.sender;\r\n        peerEnergyAddress = _peerEnergyAddress;\r\n        interfcontract = PeerEnergy(peerEnergyAddress);\r\n        // interfcontract.setExchangeAddr(this);\r\n\r\n    }  \r\n    \r\n    modifier onlyOwner() {\r\n    \trequire(msg.sender == ExchOwner, \"Sender not authorised.\");\r\n        _;\r\n    }\r\n    \r\n    /*  */\r\n    function clearEnergy() public onlySmartMeter(msg.sender) {\r\n        //should be 29 minutes \r\n        interfcontract.clearEnergyOrder(msg.sender);\r\n    }\r\n    \r\n    \r\n    /*  */\r\n    function clearToken() public onlySmartMeter(msg.sender){\r\n        // if (now>=tKStartTime + tokenMarktTime){\r\n        \tinterfcontract.clearTokenOffers();\r\n        \t// tKStartTime += tokenMarktTime;\r\n        // }\r\n        \r\n    }\r\n    \r\n    \r\n    /*  */\r\n    function restartTrade() public onlyOwner() {\r\n        interfcontract.restartTrade();\r\n        tKStartTime = now;\r\n    }\r\n    \r\n    \r\n    //This function is use to change token market time in hours\r\n    function changeTokenMarketTime(uint TimeInMins) public onlyOwner() {\r\n        uint MarktTime = 60*TimeInMins;\r\n        tokenMarktTime = MarktTime;\r\n    }\r\n}",
   "sourcePath": "D:\\blockchain\\react-box-master\\react-box-master\\truffle\\contracts\\Clearing.sol",
   "ast": {
     "absolutePath": "project:/contracts/Clearing.sol",
     "exportedSymbols": {
       "ExchangeContract": [
-        139
+        128
       ]
     },
-    "id": 140,
+    "id": 129,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -115,8 +115,8 @@
         "file": "./PeerEnergy.sol",
         "id": 2,
         "nodeType": "ImportDirective",
-        "scope": 140,
-        "sourceUnit": 7383,
+        "scope": 129,
+        "sourceUnit": 7372,
         "src": "28:26:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -127,9 +127,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 139,
+        "id": 128,
         "linearizedBaseContracts": [
-          139
+          128
         ],
         "name": "ExchangeContract",
         "nodeType": "ContractDefinition",
@@ -139,7 +139,7 @@
             "id": 4,
             "name": "ExchOwner",
             "nodeType": "VariableDeclaration",
-            "scope": 139,
+            "scope": 128,
             "src": "90:17:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -165,7 +165,7 @@
             "id": 6,
             "name": "peerEnergyAddress",
             "nodeType": "VariableDeclaration",
-            "scope": 139,
+            "scope": 128,
             "src": "114:32:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -191,7 +191,7 @@
             "id": 9,
             "name": "tKStartTime",
             "nodeType": "VariableDeclaration",
-            "scope": 139,
+            "scope": 128,
             "src": "155:29:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -215,7 +215,7 @@
               "name": "now",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 7423,
+              "referencedDeclaration": 7412,
               "src": "181:3:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
@@ -229,7 +229,7 @@
             "id": 12,
             "name": "tokenMarktTime",
             "nodeType": "VariableDeclaration",
-            "scope": 139,
+            "scope": 128,
             "src": "219:33:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -272,12 +272,12 @@
             "id": 17,
             "name": "interfcontract",
             "nodeType": "VariableDeclaration",
-            "scope": 139,
+            "scope": 128,
             "src": "304:56:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_PeerEnergy_$7382",
+              "typeIdentifier": "t_contract$_PeerEnergy_$7371",
               "typeString": "contract PeerEnergy"
             },
             "typeName": {
@@ -285,10 +285,10 @@
               "id": 13,
               "name": "PeerEnergy",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 7382,
+              "referencedDeclaration": 7371,
               "src": "304:10:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_PeerEnergy_$7382",
+                "typeIdentifier": "t_contract$_PeerEnergy_$7371",
                 "typeString": "contract PeerEnergy"
               }
             },
@@ -320,10 +320,10 @@
                 "name": "PeerEnergy",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 7382,
+                "referencedDeclaration": 7371,
                 "src": "331:10:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_type$_t_contract$_PeerEnergy_$7382_$",
+                  "typeIdentifier": "t_type$_t_contract$_PeerEnergy_$7371_$",
                   "typeString": "type(contract PeerEnergy)"
                 }
               },
@@ -337,7 +337,7 @@
               "nodeType": "FunctionCall",
               "src": "331:29:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_PeerEnergy_$7382",
+                "typeIdentifier": "t_contract$_PeerEnergy_$7371",
                 "typeString": "contract PeerEnergy"
               }
             },
@@ -397,7 +397,7 @@
                               "referencedDeclaration": 17,
                               "src": "433:14:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_PeerEnergy_$7382",
+                                "typeIdentifier": "t_contract$_PeerEnergy_$7371",
                                 "typeString": "contract PeerEnergy"
                               }
                             },
@@ -408,7 +408,7 @@
                             "lValueRequested": false,
                             "memberName": "checkSMNode",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 7025,
+                            "referencedDeclaration": 7014,
                             "src": "433:26:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
@@ -489,10 +489,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        7424,
-                        7425
+                        7413,
+                        7414
                       ],
-                      "referencedDeclaration": 7425,
+                      "referencedDeclaration": 7414,
                       "src": "425:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -601,7 +601,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 7421,
+                        "referencedDeclaration": 7410,
                         "src": "607:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -695,7 +695,7 @@
                       "referencedDeclaration": 17,
                       "src": "677:14:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PeerEnergy_$7382",
+                        "typeIdentifier": "t_contract$_PeerEnergy_$7371",
                         "typeString": "contract PeerEnergy"
                       }
                     },
@@ -729,10 +729,10 @@
                         "name": "PeerEnergy",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 7382,
+                        "referencedDeclaration": 7371,
                         "src": "694:10:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_PeerEnergy_$7382_$",
+                          "typeIdentifier": "t_type$_t_contract$_PeerEnergy_$7371_$",
                           "typeString": "type(contract PeerEnergy)"
                         }
                       },
@@ -746,13 +746,13 @@
                       "nodeType": "FunctionCall",
                       "src": "694:29:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PeerEnergy_$7382",
+                        "typeIdentifier": "t_contract$_PeerEnergy_$7371",
                         "typeString": "contract PeerEnergy"
                       }
                     },
                     "src": "677:46:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PeerEnergy_$7382",
+                      "typeIdentifier": "t_contract$_PeerEnergy_$7371",
                       "typeString": "contract PeerEnergy"
                     }
                   },
@@ -810,7 +810,7 @@
               "parameters": [],
               "src": "587:0:0"
             },
-            "scope": 139,
+            "scope": 128,
             "src": "540:243:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -845,7 +845,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 7421,
+                            "referencedDeclaration": 7410,
                             "src": "834:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -921,10 +921,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        7424,
-                        7425
+                        7413,
+                        7414
                       ],
-                      "referencedDeclaration": 7425,
+                      "referencedDeclaration": 7414,
                       "src": "826:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -987,7 +987,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 7421,
+                          "referencedDeclaration": 7410,
                           "src": "1061:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1025,7 +1025,7 @@
                         "referencedDeclaration": 17,
                         "src": "1029:14:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PeerEnergy_$7382",
+                          "typeIdentifier": "t_contract$_PeerEnergy_$7371",
                           "typeString": "contract PeerEnergy"
                         }
                       },
@@ -1036,7 +1036,7 @@
                       "lValueRequested": false,
                       "memberName": "clearEnergyOrder",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4941,
+                      "referencedDeclaration": 4930,
                       "src": "1029:31:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$__$",
@@ -1079,7 +1079,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 7421,
+                      "referencedDeclaration": 7410,
                       "src": "973:3:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -1134,7 +1134,7 @@
               "parameters": [],
               "src": "985:0:0"
             },
-            "scope": 139,
+            "scope": 128,
             "src": "928:152:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1142,201 +1142,65 @@
           },
           {
             "body": {
-              "id": 104,
+              "id": 93,
               "nodeType": "Block",
-              "src": "1165:164:0",
+              "src": "1165:173:0",
               "statements": [
                 {
-                  "condition": {
+                  "expression": {
                     "argumentTypes": null,
-                    "commonType": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    },
-                    "id": 92,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftExpression": {
-                      "argumentTypes": null,
-                      "id": 88,
-                      "name": "now",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 7423,
-                      "src": "1180:3:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "nodeType": "BinaryOperation",
-                    "operator": ">=",
-                    "rightExpression": {
-                      "argumentTypes": null,
-                      "commonType": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 88,
+                        "name": "interfcontract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 17,
+                        "src": "1229:14:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_PeerEnergy_$7371",
+                          "typeString": "contract PeerEnergy"
+                        }
                       },
-                      "id": 91,
+                      "id": 90,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "leftExpression": {
-                        "argumentTypes": null,
-                        "id": 89,
-                        "name": "tKStartTime",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 9,
-                        "src": "1185:11:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        }
-                      },
-                      "nodeType": "BinaryOperation",
-                      "operator": "+",
-                      "rightExpression": {
-                        "argumentTypes": null,
-                        "id": 90,
-                        "name": "tokenMarktTime",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 12,
-                        "src": "1199:14:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        }
-                      },
-                      "src": "1185:28:0",
+                      "memberName": "clearTokenOffers",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 821,
+                      "src": "1229:31:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
+                        "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
+                        "typeString": "function () external"
                       }
                     },
-                    "src": "1180:33:0",
+                    "id": 91,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1229:33:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
                     }
                   },
-                  "falseBody": null,
-                  "id": 103,
-                  "nodeType": "IfStatement",
-                  "src": "1176:136:0",
-                  "trueBody": {
-                    "id": 102,
-                    "nodeType": "Block",
-                    "src": "1214:98:0",
-                    "statements": [
-                      {
-                        "expression": {
-                          "argumentTypes": null,
-                          "arguments": [],
-                          "expression": {
-                            "argumentTypes": [],
-                            "expression": {
-                              "argumentTypes": null,
-                              "id": 93,
-                              "name": "interfcontract",
-                              "nodeType": "Identifier",
-                              "overloadedDeclarations": [],
-                              "referencedDeclaration": 17,
-                              "src": "1226:14:0",
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_PeerEnergy_$7382",
-                                "typeString": "contract PeerEnergy"
-                              }
-                            },
-                            "id": 95,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": false,
-                            "lValueRequested": false,
-                            "memberName": "clearTokenOffers",
-                            "nodeType": "MemberAccess",
-                            "referencedDeclaration": 832,
-                            "src": "1226:31:0",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
-                              "typeString": "function () external"
-                            }
-                          },
-                          "id": 96,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "kind": "functionCall",
-                          "lValueRequested": false,
-                          "names": [],
-                          "nodeType": "FunctionCall",
-                          "src": "1226:33:0",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_tuple$__$",
-                            "typeString": "tuple()"
-                          }
-                        },
-                        "id": 97,
-                        "nodeType": "ExpressionStatement",
-                        "src": "1226:33:0"
-                      },
-                      {
-                        "expression": {
-                          "argumentTypes": null,
-                          "id": 100,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "leftHandSide": {
-                            "argumentTypes": null,
-                            "id": 98,
-                            "name": "tKStartTime",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 9,
-                            "src": "1271:11:0",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          },
-                          "nodeType": "Assignment",
-                          "operator": "+=",
-                          "rightHandSide": {
-                            "argumentTypes": null,
-                            "id": 99,
-                            "name": "tokenMarktTime",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 12,
-                            "src": "1286:14:0",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          },
-                          "src": "1271:29:0",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
-                        "id": 101,
-                        "nodeType": "ExpressionStatement",
-                        "src": "1271:29:0"
-                      }
-                    ]
-                  }
+                  "id": 92,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1229:33:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 105,
+            "id": 94,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1351,7 +1215,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 7421,
+                      "referencedDeclaration": 7410,
                       "src": "1154:3:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -1406,17 +1270,17 @@
               "parameters": [],
               "src": "1165:0:0"
             },
-            "scope": 139,
-            "src": "1110:219:0",
+            "scope": 128,
+            "src": "1110:228:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 119,
+              "id": 108,
               "nodeType": "Block",
-              "src": "1402:76:0",
+              "src": "1411:76:0",
               "statements": [
                 {
                   "expression": {
@@ -1426,32 +1290,32 @@
                       "argumentTypes": [],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 110,
+                        "id": 99,
                         "name": "interfcontract",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 17,
-                        "src": "1413:14:0",
+                        "src": "1422:14:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PeerEnergy_$7382",
+                          "typeIdentifier": "t_contract$_PeerEnergy_$7371",
                           "typeString": "contract PeerEnergy"
                         }
                       },
-                      "id": 112,
+                      "id": 101,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "restartTrade",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2998,
-                      "src": "1413:27:0",
+                      "referencedDeclaration": 2987,
+                      "src": "1422:27:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
                         "typeString": "function () external"
                       }
                     },
-                    "id": 113,
+                    "id": 102,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1459,32 +1323,32 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1413:29:0",
+                    "src": "1422:29:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 114,
+                  "id": 103,
                   "nodeType": "ExpressionStatement",
-                  "src": "1413:29:0"
+                  "src": "1422:29:0"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 117,
+                    "id": 106,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 115,
+                      "id": 104,
                       "name": "tKStartTime",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 9,
-                      "src": "1453:11:0",
+                      "src": "1462:11:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -1494,94 +1358,94 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 116,
+                      "id": 105,
                       "name": "now",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 7423,
-                      "src": "1467:3:0",
+                      "referencedDeclaration": 7412,
+                      "src": "1476:3:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "1453:17:0",
+                    "src": "1462:17:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 118,
+                  "id": 107,
                   "nodeType": "ExpressionStatement",
-                  "src": "1453:17:0"
+                  "src": "1462:17:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 120,
+            "id": 109,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": [],
-                "id": 108,
+                "id": 97,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 107,
+                  "id": 96,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
                   "referencedDeclaration": 66,
-                  "src": "1390:9:0",
+                  "src": "1399:9:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "1390:11:0"
+                "src": "1399:11:0"
               }
             ],
             "name": "restartTrade",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 106,
+              "id": 95,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1380:2:0"
+              "src": "1389:2:0"
             },
             "payable": false,
             "returnParameters": {
-              "id": 109,
+              "id": 98,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1402:0:0"
+              "src": "1411:0:0"
             },
-            "scope": 139,
-            "src": "1359:119:0",
+            "scope": 128,
+            "src": "1368:119:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 137,
+              "id": 126,
               "nodeType": "Block",
-              "src": "1628:86:0",
+              "src": "1637:86:0",
               "statements": [
                 {
                   "assignments": [
-                    128
+                    117
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 128,
+                      "id": 117,
                       "name": "MarktTime",
                       "nodeType": "VariableDeclaration",
-                      "scope": 138,
-                      "src": "1639:14:0",
+                      "scope": 127,
+                      "src": "1648:14:0",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -1589,10 +1453,10 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 127,
+                        "id": 116,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
-                        "src": "1639:4:0",
+                        "src": "1648:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1602,14 +1466,14 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 132,
+                  "id": 121,
                   "initialValue": {
                     "argumentTypes": null,
                     "commonType": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 131,
+                    "id": 120,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1617,14 +1481,14 @@
                     "leftExpression": {
                       "argumentTypes": null,
                       "hexValue": "3630",
-                      "id": 129,
+                      "id": 118,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "1656:2:0",
+                      "src": "1665:2:0",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_60_by_1",
@@ -1636,42 +1500,42 @@
                     "operator": "*",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 130,
+                      "id": 119,
                       "name": "TimeInMins",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 122,
-                      "src": "1659:10:0",
+                      "referencedDeclaration": 111,
+                      "src": "1668:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "1656:13:0",
+                    "src": "1665:13:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "1639:30:0"
+                  "src": "1648:30:0"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 135,
+                    "id": 124,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 133,
+                      "id": 122,
                       "name": "tokenMarktTime",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 12,
-                      "src": "1680:14:0",
+                      "src": "1689:14:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -1681,68 +1545,68 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 134,
+                      "id": 123,
                       "name": "MarktTime",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 128,
-                      "src": "1697:9:0",
+                      "referencedDeclaration": 117,
+                      "src": "1706:9:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "1680:26:0",
+                    "src": "1689:26:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 136,
+                  "id": 125,
                   "nodeType": "ExpressionStatement",
-                  "src": "1680:26:0"
+                  "src": "1689:26:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 138,
+            "id": 127,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": [],
-                "id": 125,
+                "id": 114,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 124,
+                  "id": 113,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
                   "referencedDeclaration": 66,
-                  "src": "1616:9:0",
+                  "src": "1625:9:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "1616:11:0"
+                "src": "1625:11:0"
               }
             ],
             "name": "changeTokenMarketTime",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 123,
+              "id": 112,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 122,
+                  "id": 111,
                   "name": "TimeInMins",
                   "nodeType": "VariableDeclaration",
-                  "scope": 138,
-                  "src": "1592:15:0",
+                  "scope": 127,
+                  "src": "1601:15:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1750,10 +1614,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 121,
+                    "id": 110,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1592:4:0",
+                    "src": "1601:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1763,34 +1627,34 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1591:17:0"
+              "src": "1600:17:0"
             },
             "payable": false,
             "returnParameters": {
-              "id": 126,
+              "id": 115,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1628:0:0"
+              "src": "1637:0:0"
             },
-            "scope": 139,
-            "src": "1561:153:0",
+            "scope": 128,
+            "src": "1570:153:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 140,
-        "src": "58:1659:0"
+        "scope": 129,
+        "src": "58:1668:0"
       }
     ],
-    "src": "0:1717:0"
+    "src": "0:1726:0"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/contracts/Clearing.sol",
       "exportedSymbols": {
         "ExchangeContract": [
-          139
+          128
         ]
       }
     },
@@ -1810,10 +1674,10 @@
       },
       {
         "attributes": {
-          "SourceUnit": 7383,
+          "SourceUnit": 7372,
           "absolutePath": "project:/contracts/PeerEnergy.sol",
           "file": "./PeerEnergy.sol",
-          "scope": 140,
+          "scope": 129,
           "symbolAliases": [
             null
           ],
@@ -1835,17 +1699,17 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            139
+            128
           ],
           "name": "ExchangeContract",
-          "scope": 140
+          "scope": 129
         },
         "children": [
           {
             "attributes": {
               "constant": false,
               "name": "ExchOwner",
-              "scope": 139,
+              "scope": 128,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "address",
@@ -1871,7 +1735,7 @@
             "attributes": {
               "constant": false,
               "name": "peerEnergyAddress",
-              "scope": 139,
+              "scope": 128,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "address",
@@ -1897,7 +1761,7 @@
             "attributes": {
               "constant": false,
               "name": "tKStartTime",
-              "scope": 139,
+              "scope": 128,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -1919,7 +1783,7 @@
                   "overloadedDeclarations": [
                     null
                   ],
-                  "referencedDeclaration": 7423,
+                  "referencedDeclaration": 7412,
                   "type": "uint256",
                   "value": "now"
                 },
@@ -1936,7 +1800,7 @@
             "attributes": {
               "constant": false,
               "name": "tokenMarktTime",
-              "scope": 139,
+              "scope": 128,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -1978,7 +1842,7 @@
             "attributes": {
               "constant": false,
               "name": "interfcontract",
-              "scope": 139,
+              "scope": 128,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "contract PeerEnergy",
@@ -1989,7 +1853,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "PeerEnergy",
-                  "referencedDeclaration": 7382,
+                  "referencedDeclaration": 7371,
                   "type": "contract PeerEnergy"
                 },
                 "id": 13,
@@ -2022,7 +1886,7 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 7382,
+                      "referencedDeclaration": 7371,
                       "type": "type(contract PeerEnergy)",
                       "value": "PeerEnergy"
                     },
@@ -2126,10 +1990,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                7424,
-                                7425
+                                7413,
+                                7414
                               ],
-                              "referencedDeclaration": 7425,
+                              "referencedDeclaration": 7414,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -2180,7 +2044,7 @@
                                       "isPure": false,
                                       "lValueRequested": false,
                                       "member_name": "checkSMNode",
-                                      "referencedDeclaration": 7025,
+                                      "referencedDeclaration": 7014,
                                       "type": "function (address) view external returns (bool)"
                                     },
                                     "children": [
@@ -2297,7 +2161,7 @@
               ],
               "name": "",
               "payable": false,
-              "scope": 139,
+              "scope": 128,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -2394,7 +2258,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 7421,
+                                  "referencedDeclaration": 7410,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -2521,7 +2385,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 7382,
+                                  "referencedDeclaration": 7371,
                                   "type": "type(contract PeerEnergy)",
                                   "value": "PeerEnergy"
                                 },
@@ -2618,10 +2482,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                7424,
-                                7425
+                                7413,
+                                7414
                               ],
-                              "referencedDeclaration": 7425,
+                              "referencedDeclaration": 7414,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -2662,7 +2526,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 7421,
+                                      "referencedDeclaration": 7410,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -2744,7 +2608,7 @@
               "isConstructor": false,
               "name": "clearEnergy",
               "payable": false,
-              "scope": 139,
+              "scope": 128,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -2806,7 +2670,7 @@
                           "overloadedDeclarations": [
                             null
                           ],
-                          "referencedDeclaration": 7421,
+                          "referencedDeclaration": 7410,
                           "type": "msg",
                           "value": "msg"
                         },
@@ -2856,7 +2720,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "clearEnergyOrder",
-                              "referencedDeclaration": 4941,
+                              "referencedDeclaration": 4930,
                               "type": "function (address) external"
                             },
                             "children": [
@@ -2897,7 +2761,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 7421,
+                                  "referencedDeclaration": 7410,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -2938,7 +2802,7 @@
               "isConstructor": false,
               "name": "clearToken",
               "payable": false,
-              "scope": 139,
+              "scope": 128,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -3000,7 +2864,7 @@
                           "overloadedDeclarations": [
                             null
                           ],
-                          "referencedDeclaration": 7421,
+                          "referencedDeclaration": 7410,
                           "type": "msg",
                           "value": "msg"
                         },
@@ -3021,52 +2885,37 @@
               {
                 "children": [
                   {
-                    "attributes": {
-                      "falseBody": null
-                    },
                     "children": [
                       {
                         "attributes": {
                           "argumentTypes": null,
-                          "commonType": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          },
+                          "arguments": [
+                            null
+                          ],
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
+                          "isStructConstructorCall": false,
                           "lValueRequested": false,
-                          "operator": ">=",
-                          "type": "bool"
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
                         },
                         "children": [
                           {
                             "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
+                              "argumentTypes": [
                                 null
                               ],
-                              "referencedDeclaration": 7423,
-                              "type": "uint256",
-                              "value": "now"
-                            },
-                            "id": 88,
-                            "name": "Identifier",
-                            "src": "1180:3:0"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "commonType": {
-                                "typeIdentifier": "t_uint256",
-                                "typeString": "uint256"
-                              },
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
-                              "operator": "+",
-                              "type": "uint256"
+                              "member_name": "clearTokenOffers",
+                              "referencedDeclaration": 821,
+                              "type": "function () external"
                             },
                             "children": [
                               {
@@ -3075,173 +2924,38 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 9,
-                                  "type": "uint256",
-                                  "value": "tKStartTime"
+                                  "referencedDeclaration": 17,
+                                  "type": "contract PeerEnergy",
+                                  "value": "interfcontract"
                                 },
-                                "id": 89,
+                                "id": 88,
                                 "name": "Identifier",
-                                "src": "1185:11:0"
-                              },
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 12,
-                                  "type": "uint256",
-                                  "value": "tokenMarktTime"
-                                },
-                                "id": 90,
-                                "name": "Identifier",
-                                "src": "1199:14:0"
+                                "src": "1229:14:0"
                               }
                             ],
-                            "id": 91,
-                            "name": "BinaryOperation",
-                            "src": "1185:28:0"
+                            "id": 90,
+                            "name": "MemberAccess",
+                            "src": "1229:31:0"
                           }
                         ],
-                        "id": 92,
-                        "name": "BinaryOperation",
-                        "src": "1180:33:0"
-                      },
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "arguments": [
-                                    null
-                                  ],
-                                  "isConstant": false,
-                                  "isLValue": false,
-                                  "isPure": false,
-                                  "isStructConstructorCall": false,
-                                  "lValueRequested": false,
-                                  "names": [
-                                    null
-                                  ],
-                                  "type": "tuple()",
-                                  "type_conversion": false
-                                },
-                                "children": [
-                                  {
-                                    "attributes": {
-                                      "argumentTypes": [
-                                        null
-                                      ],
-                                      "isConstant": false,
-                                      "isLValue": false,
-                                      "isPure": false,
-                                      "lValueRequested": false,
-                                      "member_name": "clearTokenOffers",
-                                      "referencedDeclaration": 832,
-                                      "type": "function () external"
-                                    },
-                                    "children": [
-                                      {
-                                        "attributes": {
-                                          "argumentTypes": null,
-                                          "overloadedDeclarations": [
-                                            null
-                                          ],
-                                          "referencedDeclaration": 17,
-                                          "type": "contract PeerEnergy",
-                                          "value": "interfcontract"
-                                        },
-                                        "id": 93,
-                                        "name": "Identifier",
-                                        "src": "1226:14:0"
-                                      }
-                                    ],
-                                    "id": 95,
-                                    "name": "MemberAccess",
-                                    "src": "1226:31:0"
-                                  }
-                                ],
-                                "id": 96,
-                                "name": "FunctionCall",
-                                "src": "1226:33:0"
-                              }
-                            ],
-                            "id": 97,
-                            "name": "ExpressionStatement",
-                            "src": "1226:33:0"
-                          },
-                          {
-                            "children": [
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "isConstant": false,
-                                  "isLValue": false,
-                                  "isPure": false,
-                                  "lValueRequested": false,
-                                  "operator": "+=",
-                                  "type": "uint256"
-                                },
-                                "children": [
-                                  {
-                                    "attributes": {
-                                      "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
-                                      "referencedDeclaration": 9,
-                                      "type": "uint256",
-                                      "value": "tKStartTime"
-                                    },
-                                    "id": 98,
-                                    "name": "Identifier",
-                                    "src": "1271:11:0"
-                                  },
-                                  {
-                                    "attributes": {
-                                      "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
-                                      "referencedDeclaration": 12,
-                                      "type": "uint256",
-                                      "value": "tokenMarktTime"
-                                    },
-                                    "id": 99,
-                                    "name": "Identifier",
-                                    "src": "1286:14:0"
-                                  }
-                                ],
-                                "id": 100,
-                                "name": "Assignment",
-                                "src": "1271:29:0"
-                              }
-                            ],
-                            "id": 101,
-                            "name": "ExpressionStatement",
-                            "src": "1271:29:0"
-                          }
-                        ],
-                        "id": 102,
-                        "name": "Block",
-                        "src": "1214:98:0"
+                        "id": 91,
+                        "name": "FunctionCall",
+                        "src": "1229:33:0"
                       }
                     ],
-                    "id": 103,
-                    "name": "IfStatement",
-                    "src": "1176:136:0"
+                    "id": 92,
+                    "name": "ExpressionStatement",
+                    "src": "1229:33:0"
                   }
                 ],
-                "id": 104,
+                "id": 93,
                 "name": "Block",
-                "src": "1165:164:0"
+                "src": "1165:173:0"
               }
             ],
-            "id": 105,
+            "id": 94,
             "name": "FunctionDefinition",
-            "src": "1110:219:0"
+            "src": "1110:228:0"
           },
           {
             "attributes": {
@@ -3251,7 +2965,7 @@
               "isConstructor": false,
               "name": "restartTrade",
               "payable": false,
-              "scope": 139,
+              "scope": 128,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -3264,9 +2978,9 @@
                   ]
                 },
                 "children": [],
-                "id": 106,
+                "id": 95,
                 "name": "ParameterList",
-                "src": "1380:2:0"
+                "src": "1389:2:0"
               },
               {
                 "attributes": {
@@ -3275,9 +2989,9 @@
                   ]
                 },
                 "children": [],
-                "id": 109,
+                "id": 98,
                 "name": "ParameterList",
-                "src": "1402:0:0"
+                "src": "1411:0:0"
               },
               {
                 "attributes": {
@@ -3296,14 +3010,14 @@
                       "type": "modifier ()",
                       "value": "onlyOwner"
                     },
-                    "id": 107,
+                    "id": 96,
                     "name": "Identifier",
-                    "src": "1390:9:0"
+                    "src": "1399:9:0"
                   }
                 ],
-                "id": 108,
+                "id": 97,
                 "name": "ModifierInvocation",
-                "src": "1390:11:0"
+                "src": "1399:11:0"
               },
               {
                 "children": [
@@ -3337,7 +3051,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "restartTrade",
-                              "referencedDeclaration": 2998,
+                              "referencedDeclaration": 2987,
                               "type": "function () external"
                             },
                             "children": [
@@ -3351,24 +3065,24 @@
                                   "type": "contract PeerEnergy",
                                   "value": "interfcontract"
                                 },
-                                "id": 110,
+                                "id": 99,
                                 "name": "Identifier",
-                                "src": "1413:14:0"
+                                "src": "1422:14:0"
                               }
                             ],
-                            "id": 112,
+                            "id": 101,
                             "name": "MemberAccess",
-                            "src": "1413:27:0"
+                            "src": "1422:27:0"
                           }
                         ],
-                        "id": 113,
+                        "id": 102,
                         "name": "FunctionCall",
-                        "src": "1413:29:0"
+                        "src": "1422:29:0"
                       }
                     ],
-                    "id": 114,
+                    "id": 103,
                     "name": "ExpressionStatement",
-                    "src": "1413:29:0"
+                    "src": "1422:29:0"
                   },
                   {
                     "children": [
@@ -3393,9 +3107,9 @@
                               "type": "uint256",
                               "value": "tKStartTime"
                             },
-                            "id": 115,
+                            "id": 104,
                             "name": "Identifier",
-                            "src": "1453:11:0"
+                            "src": "1462:11:0"
                           },
                           {
                             "attributes": {
@@ -3403,33 +3117,33 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7423,
+                              "referencedDeclaration": 7412,
                               "type": "uint256",
                               "value": "now"
                             },
-                            "id": 116,
+                            "id": 105,
                             "name": "Identifier",
-                            "src": "1467:3:0"
+                            "src": "1476:3:0"
                           }
                         ],
-                        "id": 117,
+                        "id": 106,
                         "name": "Assignment",
-                        "src": "1453:17:0"
+                        "src": "1462:17:0"
                       }
                     ],
-                    "id": 118,
+                    "id": 107,
                     "name": "ExpressionStatement",
-                    "src": "1453:17:0"
+                    "src": "1462:17:0"
                   }
                 ],
-                "id": 119,
+                "id": 108,
                 "name": "Block",
-                "src": "1402:76:0"
+                "src": "1411:76:0"
               }
             ],
-            "id": 120,
+            "id": 109,
             "name": "FunctionDefinition",
-            "src": "1359:119:0"
+            "src": "1368:119:0"
           },
           {
             "attributes": {
@@ -3439,7 +3153,7 @@
               "isConstructor": false,
               "name": "changeTokenMarketTime",
               "payable": false,
-              "scope": 139,
+              "scope": 128,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -3451,7 +3165,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "TimeInMins",
-                      "scope": 138,
+                      "scope": 127,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -3464,19 +3178,19 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 121,
+                        "id": 110,
                         "name": "ElementaryTypeName",
-                        "src": "1592:4:0"
+                        "src": "1601:4:0"
                       }
                     ],
-                    "id": 122,
+                    "id": 111,
                     "name": "VariableDeclaration",
-                    "src": "1592:15:0"
+                    "src": "1601:15:0"
                   }
                 ],
-                "id": 123,
+                "id": 112,
                 "name": "ParameterList",
-                "src": "1591:17:0"
+                "src": "1600:17:0"
               },
               {
                 "attributes": {
@@ -3485,9 +3199,9 @@
                   ]
                 },
                 "children": [],
-                "id": 126,
+                "id": 115,
                 "name": "ParameterList",
-                "src": "1628:0:0"
+                "src": "1637:0:0"
               },
               {
                 "attributes": {
@@ -3506,21 +3220,21 @@
                       "type": "modifier ()",
                       "value": "onlyOwner"
                     },
-                    "id": 124,
+                    "id": 113,
                     "name": "Identifier",
-                    "src": "1616:9:0"
+                    "src": "1625:9:0"
                   }
                 ],
-                "id": 125,
+                "id": 114,
                 "name": "ModifierInvocation",
-                "src": "1616:11:0"
+                "src": "1625:11:0"
               },
               {
                 "children": [
                   {
                     "attributes": {
                       "assignments": [
-                        128
+                        117
                       ]
                     },
                     "children": [
@@ -3528,7 +3242,7 @@
                         "attributes": {
                           "constant": false,
                           "name": "MarktTime",
-                          "scope": 138,
+                          "scope": 127,
                           "stateVariable": false,
                           "storageLocation": "default",
                           "type": "uint256",
@@ -3541,14 +3255,14 @@
                               "name": "uint",
                               "type": "uint256"
                             },
-                            "id": 127,
+                            "id": 116,
                             "name": "ElementaryTypeName",
-                            "src": "1639:4:0"
+                            "src": "1648:4:0"
                           }
                         ],
-                        "id": 128,
+                        "id": 117,
                         "name": "VariableDeclaration",
-                        "src": "1639:14:0"
+                        "src": "1648:14:0"
                       },
                       {
                         "attributes": {
@@ -3578,9 +3292,9 @@
                               "type": "int_const 60",
                               "value": "60"
                             },
-                            "id": 129,
+                            "id": 118,
                             "name": "Literal",
-                            "src": "1656:2:0"
+                            "src": "1665:2:0"
                           },
                           {
                             "attributes": {
@@ -3588,23 +3302,23 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 122,
+                              "referencedDeclaration": 111,
                               "type": "uint256",
                               "value": "TimeInMins"
                             },
-                            "id": 130,
+                            "id": 119,
                             "name": "Identifier",
-                            "src": "1659:10:0"
+                            "src": "1668:10:0"
                           }
                         ],
-                        "id": 131,
+                        "id": 120,
                         "name": "BinaryOperation",
-                        "src": "1656:13:0"
+                        "src": "1665:13:0"
                       }
                     ],
-                    "id": 132,
+                    "id": 121,
                     "name": "VariableDeclarationStatement",
-                    "src": "1639:30:0"
+                    "src": "1648:30:0"
                   },
                   {
                     "children": [
@@ -3629,9 +3343,9 @@
                               "type": "uint256",
                               "value": "tokenMarktTime"
                             },
-                            "id": 133,
+                            "id": 122,
                             "name": "Identifier",
-                            "src": "1680:14:0"
+                            "src": "1689:14:0"
                           },
                           {
                             "attributes": {
@@ -3639,43 +3353,43 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 128,
+                              "referencedDeclaration": 117,
                               "type": "uint256",
                               "value": "MarktTime"
                             },
-                            "id": 134,
+                            "id": 123,
                             "name": "Identifier",
-                            "src": "1697:9:0"
+                            "src": "1706:9:0"
                           }
                         ],
-                        "id": 135,
+                        "id": 124,
                         "name": "Assignment",
-                        "src": "1680:26:0"
+                        "src": "1689:26:0"
                       }
                     ],
-                    "id": 136,
+                    "id": 125,
                     "name": "ExpressionStatement",
-                    "src": "1680:26:0"
+                    "src": "1689:26:0"
                   }
                 ],
-                "id": 137,
+                "id": 126,
                 "name": "Block",
-                "src": "1628:86:0"
+                "src": "1637:86:0"
               }
             ],
-            "id": 138,
+            "id": 127,
             "name": "FunctionDefinition",
-            "src": "1561:153:0"
+            "src": "1570:153:0"
           }
         ],
-        "id": 139,
+        "id": 128,
         "name": "ContractDefinition",
-        "src": "58:1659:0"
+        "src": "58:1668:0"
       }
     ],
-    "id": 140,
+    "id": 129,
     "name": "SourceUnit",
-    "src": "0:1717:0"
+    "src": "0:1726:0"
   },
   "compiler": {
     "name": "solc",
@@ -3705,10 +3419,16 @@
       "links": {},
       "address": "0x7ED53DF9A488B1A55531a06cb7D9da6351b90f9a",
       "transactionHash": "0x6626f2d92e2b24b62f9c81987e2df61f4d48ac0c63c8fee9c5c5d309cfd602ae"
+    },
+    "1721630974945": {
+      "events": {},
+      "links": {},
+      "address": "0xc567F00a80a8814d1fd4c35424946841D36F7808",
+      "transactionHash": "0xe22b6042570dbad61c2219170df1ec5abb7f969727bb88b6541a3e8acd4f098f"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-07-21T17:33:38.589Z",
+  "updatedAt": "2024-07-22T08:03:29.602Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

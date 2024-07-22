@@ -1,4 +1,4 @@
-import React ,{useState} from "react";  
+import React ,{useState,useEffect} from "react";  
 
 const TokenOffers = (props) => {
     const [sellOffers, setSellOffers] = useState([]);
@@ -7,7 +7,13 @@ const TokenOffers = (props) => {
     const [sellQuantity, setSellQuantity] = useState('');
     const [buyPrice, setBuyPrice] = useState('');
     const [buyQuantity, setBuyQuantity] = useState('');
+    const [refId,setRefId]=useState('');
+    const [refIndex,setRefIndex]=useState('');
+    const [refIdFromIndex,setRefIdFromIndex]=useState('');
 
+    useEffect(() => {
+        loadOffers();
+      }, []);
 
     const loadOffers = async (contract) => {
         const sellOffers = await contract.methods.viewSellTokenOffers().call();
@@ -40,7 +46,7 @@ const TokenOffers = (props) => {
         }
     };
 
-    const confirmSell = async (refId) => {
+    const confirmSell = async () => {
         if(props.contract) {
             try {
                 await props.contract.methods.sellerConfirmation(refId).send({ from: props.account });
@@ -52,13 +58,25 @@ const TokenOffers = (props) => {
         }
     };
 
-    const confirmBuy = async (refId) => {
+    const confirmBuy = async () => {
         if(props.contract) {
             try {
                 await props.contract.methods.buyerConfirmation(refId).send({ from: props.account });
                 loadOffers(props.contract);
             } catch (error) {
                 console.error(error);   
+                alert(error);
+            }
+        }
+    };
+
+    const getRefIdByIndex = async () => {
+        if (props.contract) {
+            try {
+                const r = await props.contract.methods.RefId(refIndex).call();
+                setRefIdFromIndex(r);
+            } catch (error) {
+                console.error(error);
                 alert(error);
             }
         }
@@ -106,10 +124,18 @@ const TokenOffers = (props) => {
 
         <div>
             <h2>Confirm Transactions</h2>
-            <input type="text" placeholder="Reference ID" />
+            <input type="text" placeholder="Reference ID" value={refId} onChange={(e) => setRefId(e.target.value)} />
             <button onClick={confirmSell}>Confirm Sell</button>
             <button onClick={confirmBuy}>Confirm Buy</button>
         </div>
+
+        <div>
+            <h2>ref id by index</h2>
+            <input type="text" placeholder="Reference Index" value={refIndex} onChange={(e) => setRefIndex(e.target.value)} />
+            <button onClick={getRefIdByIndex}>get ref id </button>
+            <p>ref id: {refIdFromIndex}</p>
+        </div>
+
         </div>
     );
 };
