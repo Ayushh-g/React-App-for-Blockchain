@@ -1,6 +1,6 @@
-# React client
+# Peer to Peer Energy Transfer D-APP using Truffle and React 
 
-This react project is unopinionated with only `web3.js` as an added dependency, so nothing stands in your way.
+This react project enables users to access all functionalities of Smart Contracts.
 
 ## Getting started
 
